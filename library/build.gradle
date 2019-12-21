@@ -1,14 +1,15 @@
 apply plugin: 'com.android.library'
+apply plugin: 'com.github.dcendents.android-maven'
 
 group = 'com.davemorrissey.labs'
 archivesBaseName = 'subsampling-scale-image-view'
-version = '3.10.1'
+version = '3.10.6.111'
 
 android {
     compileSdkVersion 29
 
     defaultConfig {
-        minSdkVersion 16
+        minSdkVersion 15
         targetSdkVersion 29
         consumerProguardFiles 'proguard-rules.txt'
     }
@@ -24,10 +25,10 @@ configurations {
 }
 
 dependencies {
-    javadocs 'androidx.exifinterface:exifinterface:1.0.0'
+    javadocs 'androidx.exifinterface:exifinterface:1.1.0'
     javadocs 'androidx.annotation:annotation:1.1.0'
     implementation 'androidx.annotation:annotation:1.1.0'
-    implementation 'androidx.exifinterface:exifinterface:1.0.0'
+    implementation 'androidx.exifinterface:exifinterface:1.1.0'
 }
 
 task javadoc(type: Javadoc) {
